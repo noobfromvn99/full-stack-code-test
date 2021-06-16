@@ -3,16 +3,18 @@
     <div class="title-nav">
       <h1 class="title">weather</h1>
     </div>
-    <Navigation />
     <Nuxt />
   </div>
 </template>
 
 <script>
-import Navigation from '@/components/Navigation/Navigation'
 export default {
-  components: {
-    Navigation,
+  components: {},
+  mounted() {
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => this.$nuxt.$loading.finish(), 500)
+    })
   },
 }
 </script>
@@ -42,16 +44,14 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .button--grey {
-    color: green;
-    background-color: #35495e;
+  .right-weather-info {
+    text-align: right;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .button--grey {
-    color: red;
-    background-color: #35495e;
+  .title {
+    color: white;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12 col-md-4 col-sm-12 col-xs-12">
+      <div class="col-12 col-md-10 col-sm-12 col-xs-12">
         <div class="p-4">
           <div class="row">
             <div class="col">
@@ -15,7 +15,7 @@
                 <span> {{ weather._weatherHumidity }} </span>
               </p>
             </div>
-            <div class="col container">
+            <div class="col container right-weather-info">
               <h1 class="font-weight-bold" style="color: #a7e7ea">
                 {{ weather._weatherTemp }} <span>&#8451;</span>
               </h1>
@@ -26,6 +26,7 @@
             </div>
           </div>
         </div>
+        <div class="p-7 text-center">last updated: {{ date }}</div>
         <hr />
       </div>
     </div>
@@ -41,6 +42,16 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  data() {
+    return {
+      date:
+        this.weather._weatherLastUpdated !== undefined
+          ? new Date(
+              this.weather._weatherLastUpdated * 1000
+            ).toLocaleDateString('en-US')
+          : 'not recorded',
+    }
   },
 }
 </script>

@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  loading: '~/components/LoadingBar.vue',
   head: {
     title: 'weather',
     meta: [
