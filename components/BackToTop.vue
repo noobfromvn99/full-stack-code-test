@@ -1,4 +1,4 @@
-<!-- @Author Yongqian Huang, created at 20/08/2020
+<!-- Back to top button to scroll back top
  -->
 <template>
   <a

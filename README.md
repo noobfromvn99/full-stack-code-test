@@ -1,5 +1,7 @@
 # weather
 
+News Perform Frontend code test - Weather app developed by Bach Dao
+
 ## Build Setup
 
 ```bash
@@ -17,4 +19,3 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
